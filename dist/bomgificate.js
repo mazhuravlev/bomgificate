@@ -14,8 +14,12 @@ function processWord(word) {
     if (matches.length === 0) {
         return word;
     }
-    var position = matches[0].index === 0 && vowels.indexOf(matches[0].match.toLowerCase()) !== -1 ? matches[1].index : matches[0].index;
-    return '\u0411\u041E\u041C\u0416' + word.substr(position).toUpperCase();
+    try {
+        var position = matches[0].index === 0 && vowels.indexOf(matches[0].match.toLowerCase()) !== -1 ? matches[1].index : matches[0].index;
+        return '\u0411\u041E\u041C\u0416' + word.substr(position).toUpperCase();
+    } catch (e) {
+        return word;
+    }
 }
 
 function getPositions(word) {

@@ -3,8 +3,12 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "mocha": "./node_modules/mocha/bin/mocha"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -19,11 +23,12 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "mocha": "^5.0.1"
   },
   "dependencies": {}
 }

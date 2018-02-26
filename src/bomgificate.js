@@ -12,10 +12,14 @@ function processWord(word) {
     if (matches.length === 0) {
         return word;
     }
+    try {
     const position = matches[0].index === 0 && vowels.indexOf(matches[0].match.toLowerCase()) !== -1
         ? matches[1].index
         : matches[0].index;
     return `БОМЖ${word.substr(position).toUpperCase()}`;
+    } catch(e) {
+        return word;
+    }
 }
 
 function getPositions(word) {
