@@ -1,5 +1,4 @@
 const bomg = require('bomgificate');
-//const b = bomg('вася и вася');
 const assert = require('assert');
 
 describe('Bomg', function() {
