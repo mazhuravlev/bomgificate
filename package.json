@@ -3,11 +3,8 @@
   "version": "1.0.3",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "mocha": "./node_modules/mocha/bin/mocha"
-  },
   "scripts": {
-    "test": "mocha",
+    "test": "node_modules/.bin/mocha",
     "build": "gulp"
   },
   "repository": {
